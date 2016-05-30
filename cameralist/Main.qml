@@ -111,6 +111,11 @@ MainView {
                                 }
                             }
 
+                            Text {
+                                text: "Orientation: " + modelData.orientation
+                            }
+
+
                             Rectangle {
                                 width: parent.width
                                 height: units.gu(0.1)
