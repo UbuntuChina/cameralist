@@ -43,7 +43,7 @@ MainView {
         id: highlight
         Rectangle {
             width: parent.width
-            height: delegate.height
+            height: listview.delegate.height
             color: "lightsteelblue"; radius: 5
             Behavior on y {
                 SpringAnimation {

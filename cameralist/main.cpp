@@ -17,7 +17,7 @@ QString getPrivatePath()
     QString absolutePath = QDir(writablePath).absolutePath();
     qDebug() << "absoluePath: " << absolutePath;
 
-    absolutePath += ".liu-xiao-guo/photos/";
+    absolutePath += ".liu-xiao-guo/photos";
 
     // We need to make sure we have the path for storage
     QDir dir(absolutePath);
