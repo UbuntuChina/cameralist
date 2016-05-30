@@ -12,6 +12,8 @@ MainView {
     width: units.gu(60)
     height: units.gu(85)
 
+    property var mymodel: listview.currentItem.mymodel
+
     Camera {
         id: camera
 
@@ -20,6 +22,12 @@ MainView {
         exposure {
             exposureCompensation: -1.0
             exposureMode: Camera.ExposurePortrait
+        }
+
+        focus {
+            focusMode: Camera.FocusAuto
+//            focusPointMode: Camera.FocusPointCustom
+//            customFocusPoint: Qt.point(0.2, 0.2) // Focus relative to top-left corner
         }
 
         flash.mode: Camera.FlashRedEyeReduction
@@ -83,6 +91,7 @@ MainView {
                         id: delegate
                         width: listview.width
                         height: layout.childrenRect.height + units.gu(0.5)
+                        property var mymodel: modelData
 
                         Column {
                             id: layout
@@ -140,6 +149,8 @@ MainView {
                     width: parent.width
                     height: parent.height - listview.height
                     focus : visible
+                    orientation: mymodel.deviceId === "1" ?
+                                     mymodel.orientation : -mymodel.orientation
 
                     MouseArea {
                         anchors.fill: parent
