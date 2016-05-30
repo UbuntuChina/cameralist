@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=cameralist
+Exec=cameralist
+Icon=cameralist/cameralist.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

@@ -1,0 +1,17 @@
+{
+    "name": "cameralist.liu-xiao-guo",
+    "description": "description of cameralist",
+    "architecture": "@CLICK_ARCH@",
+    "title": "cameralist",
+    "hooks": {
+        "cameralist": {
+            "apparmor": "cameralist/cameralist.apparmor",
+            "desktop":  "cameralist/cameralist.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "XiaoGuo, Liu <xiaoguo.liu@canonical.com>",
+    "framework" : "ubuntu-sdk-15.04"
+}
+
+
